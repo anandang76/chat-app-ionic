@@ -1,0 +1,28 @@
+<ion-view view-title="" class="padding"  hide-nav-bar="true">
+   <div id="form">
+                <div class="list">
+      <div class="item item-divider"><center>Sign In</center></div>
+      <div class="item item-body" ng-switch on="loginData">
+        <center>
+<form name="sendMessageForm" ng-submit="signin()" novalidate>
+		<p class="error">{{msg}}</p>
+		 <label class="item item-input">
+              
+              <input type="text" id="email" class="input" placeholder="Email Address" value="" ng-model="email">
+            </label>
+<label class="item item-input">
+              <input type="password" class="input" id="password" placeholder="Password" value=""  ng-model="password">
+            </label>	  
+	  <button id="submit" value="Sign In" type="submit" class="button button-block button-positive activated">Sign In</button>
+</form>
+ <p class="text-center">
+              <a href="#/signup">Sign Up</a> &nbsp;&nbsp;&nbsp;<a href="#/forgot-password">Forgot password</a>
+            </p>
+        </center>
+      </div>
+    </div>
+    </div>
+	</div>
+  </ion-content>
+</ion-view>
+

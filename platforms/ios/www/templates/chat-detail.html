@@ -1,0 +1,89 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+<ion-view >
+<ion-nav-title>{{username}} <span><i class="ion-ios-circle-filled {{status}}"></i></span></ion-nav-title>
+ <ion-content>
+
+    <ion-list>
+
+    
+  <ion-contenthas-bouncing="true" class="has-header has-footer" 
+              delegate-handle="userMessageScroll">
+            
+              <div ng-repeat="history in historys" class="message-wrapper"
+                  on-hold="onMessageHold($event, $index, history)">
+      
+                  <div ng-if="history.from_address !== 'me'">
+                      
+                  
+                      <div class="chat-bubble left">
+      
+                          <div class="message" ng-bind-html="history.message | nl2br" autolinker>
+                          </div>
+      
+                          <div class="message-detail">
+                              <span ng-click="viewProfile(history)" 
+                                  class="bold">{{history.from_address}}</span>,
+                              <span am-time-ago="history.time">{{history.time}}</span>
+                          </div>
+      
+                      </div>
+                  </div>
+      
+                  <div ng-if="history.from_address == 'me'">
+                    
+                    
+                      <div class="chat-bubble right">
+      
+                          <div class="message" ng-bind-html="history.message | nl2br" autolinker>
+                          </div>
+      
+                          <div class="message-detail">
+                              <span ng-click="viewProfile(history)" 
+                                  class="bold">{{history.from_address}}</span>, 
+                              <span am-time-ago="history.time">{{history.time}}</span>
+                          </div>
+      
+                      </div>
+                    
+                  </div>
+      
+                  <div class="cf"></div>
+      
+              </div>
+          </ion-content>
+
+
+
+  </ion-content>
+
+
+
+<form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+              <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+                  <label class="item-input-wrapper">
+                      <textarea ng-model="input.message" value="" placeholder="Send  a message to {{username}}..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+                  </label>
+                  <div class="footer-btn-wrap">
+                    <button class="button button-icon icon ion-android-send footer-btn" type="submit"
+                        ng-disabled="!input.message || input.message === ''">
+                    </button>
+                  </div>
+              </ion-footer-bar>
+          </form>
+
+
+
+</ion-view>
+
+
+
+
+
+
+

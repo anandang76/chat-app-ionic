@@ -1,0 +1,304 @@
+
+/* Empty. Add your own CSS if you like */
+.centered {
+  position: relative;	
+  margin: 0px auto;
+  top:40%;
+  background-color: #f8f8f8;
+   border-color: #b2b2b2;
+
+    color: #444;
+    width:300px;
+    border:0.5px ;
+   
+}
+.error{color:red!important;}
+.input{border-bottom:1px #b2b2b2 solid!important;text-align: center; }
+button{background-color:green;}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+.icon{cursor:pointer;}
+.bar.bar-assertive{
+  background: #f6f6f6 none repeat scroll 0 0;
+    border-color: none!important;
+}
+.form-control {
+    border: 1px solid #e2e2e4!important;
+    box-shadow: none;
+    color: #c2c2c2;
+}
+.form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%!important;
+}
+.chat-txt {
+    float: left;
+    margin-right: 5px;
+    width: 60%!important;
+}
+.btn-group, .btn-group-vertical {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.btn-group > .btn:first-child {
+    margin-left: 0;
+}
+.btn-group-vertical > .btn, .btn-group > .btn {
+    float: left;
+    position: relative;
+}
+.btn-white {
+    background-clip: padding-box;
+    background-color: #ffffff;
+    border-color: rgba(150, 160, 180, 0.3);
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.05) inset;
+    border: 1px solid #e2e2e4!important;
+    box-shadow: none;
+}
+.btn-white {
+    box-shadow: none !important;
+}
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.bar.bar-assertive.bar-footer {background-image: none;}
+
+textarea{width:100%;}
+
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+
+/* allows the bar-footer to be elastic /*
+/* optionally set a max-height */
+/* maxlength on the textarea will prevent /*
+/* it from getting too large also */
+.bar-footer {
+  overflow: visible !important;
+}
+
+.bar-footer textarea {
+  resize: none;
+  height: 25px;
+}
+
+/* fixes an ios bug bear */
+button.ion-android-send {
+  padding-top: 2px;
+}
+
+/* add this to keep your footer buttons down 
+at the bottom as the textarea resizes */
+.footer-btn-wrap {
+  position: relative; 
+  height: 100%; 
+  width: 50px; 
+  top: 7px;
+}
+
+.footer-btn {
+  position: absolute !important; 
+  bottom: 0;
+}
+
+img.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+}
+
+img.profile-pic.left {
+  left: 10px;
+}
+
+img.profile-pic.right {
+  right: 10px;
+}
+
+.ion-email {
+  float: right;
+  font-size: 32px;
+  vertical-align: middle;
+}
+
+.message {
+  font-size: 14px;
+}
+
+.message-detail {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.bar.item-input-inset .item-input-wrapper input {
+  width: 100% !important;
+}
+
+.message-wrapper {
+  position: relative;
+}
+
+.message-wrapper:last-child {
+  margin-bottom: 10px;
+}
+
+.chat-bubble {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 18px;
+  position: relative;
+  margin: 10px;
+  max-width: 80%;
+}
+
+.chat-bubble:before {
+  content: "\00a0";
+  display: block;
+  height: 16px;
+  width: 9px;
+  position: absolute;
+  bottom: -7.5px;
+}
+
+.chat-bubble.left {
+  background-color: #e6e5eb;
+  float: left;
+  
+}
+
+.chat-bubble.left:before {
+  background-color: #e6e5eb;
+  left: 10px;
+  -webkit-transform: rotate(70deg) skew(5deg);
+}
+
+.chat-bubble.right {
+  background-color: #158ffe;
+  color: #fff;
+  float: right;
+  
+}
+
+.chat-bubble.right:before {
+  background-color: #158ffe;
+  right: 10px;
+  -webkit-transform: rotate(118deg) skew(-5deg);
+}
+
+.chat-bubble.right a.autolinker {
+  color: #fff;
+  font-weight: bold;
+}
+
+.user-messages-top-icon {
+  font-size: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  right: 5px;
+}
+
+.msg-header-username {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
+
+input, textarea, .item-input, .item-input-wrapper {
+  background-color: #f4f4f4 !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.cf {
+  clear: both !important;
+}
+
+a.autolinker {
+  color: #3b88c3;
+  text-decoration: none;
+}
+
+/* loading */
+.loader-center {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.loader .ion-loading-c {
+  font-size: 64px;
+}
+
+.ion-ios-circle-filled{font-size:12px;color:red;}
+.online{color:green;}
+

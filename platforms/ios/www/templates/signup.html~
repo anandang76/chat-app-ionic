@@ -1,0 +1,70 @@
+ <ion-view view-title="Sign-Up" hide-nav-bar="true">
+ <div id="form">
+      <div class="list">
+      <div class="item item-divider"><center>Sign Up</center></div>
+      <div class="item item-body" >
+        <center>
+<form  ng-submit="signupform()" name="signup" ng-controller="SignupCtrl">
+		
+		
+		<label class="item item-input">
+              
+       <input type="text" id="fname" name="fname" class="input" placeholder="First Name *" value="" ng-model="fname" required="required" />
+            </label>
+		 <span style="color:red" ng-show="signup.fname.$touched || (signup.fname.$dirty && signup.fname.$invalid)">
+  <span ng-show="signup.fname.$error.required">First Name is required.</span>
+  </span>
+			
+			<label class="item item-input">
+              
+              <input type="text" name="lname" class="input" placeholder="Last Name *" value="" ng-model="lname" required="required" />
+            </label>
+			 <span style="color:red" ng-show="signup.lname.$touched || (signup.lname.$dirty && signup.lname.$invalid)">
+  <span ng-show="signup.lname.$error.required">Last Name is required.</span>
+  </span>
+			<label class="item item-input">
+              
+              <input type="text" name="displayname" class="input" placeholder="Display Name *" value="" ng-model="displayname" required="required" />
+            </label>
+			 <span style="color:red" ng-show="signup.displayname.$touched || (signup.displayname.$dirty && signup.displayname.$invalid)">
+  <span ng-show="signup.displayname.$error.required">Display Name is required.</span>
+  </span>
+		 <label class="item item-input">
+              
+              <input type="email" name="email" class="input" placeholder="Email Address *" value="" ng-model="email" required="required" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" />
+            </label>
+			
+  <span style="color:red" ng-show="signup.email.$touched || (signup.email.$dirty && signup.email.$invalid)">
+  <span ng-show="signup.email.$error.required">Email Address is required.</span>
+    <span ng-show="signup.email.$error.pattern">Please enter a valid email address!</span>
+
+  </span>
+  
+<label class="item item-input">
+              <input type="password" class="input" name="password" placeholder="Password *" value=""  ng-model="password" required="required" />
+            </label>	  
+			<span style="color:red" ng-show="signup.password.$touched || (signup.password.$dirty && signup.password.$invalid)">
+  <span ng-show="signup.password.$error.required">Password is required.</span>
+  </span>
+			<label class="item item-input">
+              
+              <input type="password" name="confirm_password" class="input" placeholder="Confirm Password *" ng-match="password" value="" ng-model="confirm_password"  wj-validation-error="confirm_password != password ? 'Passwords don\'t match' : ''"required="required" />
+            </label>
+			 <span style="color:red" ng-show="signup.confirm_password.$touched || (signup.confirm_password.$dirty && signup.confirm_password.$invalid)">
+  <span ng-show="signup.confirm_password.$error.required">Confirm Password is required.</span>
+<span ng-show="wjValidationError">Confirm Password is required.</span>
+
+  </span>
+	  <button id="submit" value="Sign Up"  type="submit" class="button button-block button-positive activated">Sign Up</button>
+</form>
+ <p class="text-center">
+              <a href="#/">Sign In</a> &nbsp;&nbsp;&nbsp;<a href="#/forgot-password">Forgot password</a>
+            </p>
+        </center>
+      </div>
+    </div>
+    
+
+    </div>
+  
+      </ion-view>
